@@ -1,0 +1,70 @@
+<html>
+  <body style="background-color: black">  
+<ion-menu [content]="content">
+  <ion-header>
+    <ion-toolbar color="dark">
+        <ion-title>Pages</ion-title>
+    </ion-toolbar>
+</ion-header>
+  <ion-content>
+      <ion-list background-color="black">
+          <button ion-item *ngFor="let p of pages" (click)="openPage(p)">
+            {{p.title}}
+          </button>
+        </ion-list>
+  </ion-content>
+
+</ion-menu>
+
+<ion-menu [content]="content" side="right" id="menu2">
+  <ion-header>
+      <ion-toolbar color="dark">
+          <ion-title>USER PROFILE</ion-title>
+      </ion-toolbar>
+  </ion-header>
+  <ion-content>
+      <ion-list>
+          <button ion-item *ngFor="let p of pages1" (click)="openPage(p)">
+            {{p.title}}
+          </button>
+        </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-header>
+  <ion-navbar color="dark">
+    <button ion-button menuToggle="left" start>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title id="title1">
+      {{t}}
+    </ion-title>
+    <button ion-button menuToggle="right" end>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+  </ion-navbar>
+</ion-header>
+<ion-content class="ioc1">
+
+    <!-- <form (ngSubmit)="logForm()">
+        <ion-item>
+          <ion-label>User Name</ion-label>
+          <ion-input type="text"  name="username"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>Password</ion-label>
+          <ion-input type="password" name="Password"></ion-input>
+        </ion-item>
+        <button  ion-button type="submit">Login</button>
+      </form> -->
+ </ion-content>
+<!-- <ion-footer color="dark">
+    <ion-navbar color="dark">
+       <ion-item>
+        <ion-label floating>Company Name</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item> 
+      </ion-navbar>
+  </ion-footer> -->
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="true"></ion-nav>

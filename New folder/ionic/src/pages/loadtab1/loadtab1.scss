@@ -1,0 +1,23 @@
+page-loadtab1 {
+    .secondry-content {
+        background: rgb(60, 60, 60);
+    }
+
+    .primary-content {
+        background: rgb(22, 21, 21);
+    }
+    .balanced{
+        color: rgba(255, 0, 0, 0.699);
+      }
+    textarea{
+        height:200px;	
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+
+    button{
+        align-self: centre;
+        width: 50%;
+      }
+
+}
